@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700&family=Poppins:wght@300;400;500&display=swap");
+
+:root {
+	// icons
+	--c-icon-400: var(--c-a-400);
+	--c-icon-hover-400: var(--c-a-400);
+
+	// forms
+	--bg-form-400: var(--c-p-400);
+
+	//links
+	--c-text-link-400: var(--c-text-400);
+	--bg-link-hover-400: var(--c-a-300);
+
+	--c-link-active-400: #fff;
+	--bg-link-active-400: var(--c-a-500);
+
+	// titles
+	--c-title-400: var(--c-title-400);
+	--c-section-title-400: var(--c-title-400);
+
+	// paragraphs
+	--c-text-400: var(--c-text-400);
+
+	//body
+	--c-body-text-400: var(--c-text-400);
+
+	//Success
+	--c-success-400: #5cb85c;
+	//Errors
+	--c-error-400: #fc4747;
+	--c-error-hover-400: #d43030;
+
+	// Buttons
+	--bg-btn-cta-400: var(--c-a-400);
+	--c-cta-button-hover-400: var(--c-a-300);
+
+	//-- special buttons
+	--bg-btn-form-400: var(--c-a-400);
+	--b-btn-form-400: var(--c-a-500);
+
+	--bg-btn-form-hover-400: var(--c-a-300);
+	--c-btn-form-400: var(--c-text-400);
+	--c-btn-form-hover-400: #fff;
+
+	// Sections
+	--bg-section-400: var(--c-p-400);
+
+	//Modals
+	--bg-modal-400: var(--bg-body-400);
+
+	// Shadows
+	--box-shadow-400: 0 3px 8px rgba(0, 0, 0, 0.1);
+
+	// Fonts
+	--ff-body-400: "Kumbh Sans", sans-serif;
+
+	// Margins
+	--mt-section-400: 18rem;
+
+	// --fs-900: 20rem;
+	--fs-800: 3.2rem;
+	--fs-700: 2.4rem;
+	// --fs-600: 2.4rem;
+	--fs-500: 1.8rem;
+	--fs-400: 1.5rem;
+	--fs-300: 1.3rem;
+	// --fs-200: 1.2rem;
+
+	// main
+	// color for titles
+	--c-title-400: #111d1c;
+	// color for paragraphs
+	--c-text-400: #111d1c;
+	--bg-body-400: #f9f9f9;
+
+	// Colors  -> Primary = p ,Secondary = s  , a = accent
+
+	// accent
+	--c-a-500: #167364;
+	--c-a-400: #20ad96;
+	--c-a-300: #2fdcbf;
+
+	// primary
+	--c-p-500: rgb(61, 131, 130) 7e;
+	--c-p-400: rgb(174, 224, 223);
+	--c-p-300: rgba(104, 234, 232, 0.494);
+
+	// secondary
+	--c-s-500: #404446;
+	--c-s-400: #e6e6e6;
+	--c-s-300: #f1f0f0;
+
+	// primary light
+
+	// primary dark
+	// --c-p-d-400: #5a837d;
+
+	// --c-p-l-400: #20ad96;
+	// --c-p-d-400: #20ad96;
+
+	// Theme
+	[data-theme="Dark"] {
+	}
+}
+
+/*****************         Resets             **************************/
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: var(--ff-body-400);
+	font-size: var(--fs-400);
+	min-height: 100vh;
+	background-color: var(--bg-body-400);
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	color: var(--c-body-text-400);
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 400;
+}
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/*****************         Utility classes             **************************/
+
+/*****************      Media queries            **************************/
+
+// 481px -  1024px
+@media (min-width: 30.1em) and (max-width: 64em) {
+	:root {
+		// Tablet
+		// --fs-900-t: 17.5rem;
+		// --fs-800-t: 4rem;
+		// --fs-700-t: 3.2rem;
+		// --fs-600-t: 1.8rem;
+		// --fs-500-t: 1.8rem;
+		// --fs-200-t: 1.3rem;
+	}
+}
+
+// 481px - 750px
+@media (min-width: 30.1em) and (max-width: 46.875em) {
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+
+		transform: translateY(-200%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/*****************     Global Classes            **************************/
+
+.col-12 {
+	display: grid;
+	grid-template-columns: [full-start] minmax(14rem, auto) [col-start] repeat(12, minmax(6.5rem, 12rem)) minmax(14rem, auto) [full-end];
+	grid-column-gap: 3rem;
+	grid-template-rows: max-content;
+}
+
+// / 760px 1024px
+@media (max-width: 64em) {
+	.col-12 {
+		grid-template-columns: [full-start] minmax(3.9rem, auto) [col-start] repeat(12, minmax(4.8rem, 12rem)) minmax(3.9rem, auto) [full-end];
+		grid-column-gap: 1rem;
+	}
+
+	:root {
+		--mt-section-400: 8rem;
+	}
+}
+
+// 375 -480px
+@media (max-width: 30em) {
+	.col-12 {
+		grid-template-columns: [full-start] minmax(0.5rem, auto) [col-start] repeat(12, minmax(2rem, 12rem)) minmax(0.5rem, auto) [full-end];
+		grid-column-gap: 0.2rem;
+	}
+
+	:root {
+		// Smartphone
+		// --fs-900-s: 10rem;
+		// --fs-800-s: 2rem;
+		// --fs-700-s: 1.5rem;
+		// --fs-600-s: 1.4rem;
+		// --fs-400-s: 1.2rem;
+		// --fs-200-s: 1rem;
+	}
+}
+
+// Theme
+// Background Color:
+
+// Color: Ivory or Light Gray
+// Hex Code: #F8F8F8 or #EDEDED
+// Primary Color:
+
+// Color: Deep Sapphire Blue
+// Hex Code: #001F3F
+// Accent Color:
+
+// Color: Gold
+// Hex Code: #FFD700
+// Heading Color:
+
+// Color: Charcoal Gray
+// Hex Code: #333333
+// Body Text Color:
+
+// Color: Dark Charcoal
+// Hex Code: #555555
+// Paragraph Hue:
+
+// Color: Royal Purple
+// Hex Code: #4B0082
+
+// Dark Theme
+// Background Color:
+
+// Color: Dark Charcoal
+// Hex Code: #333333
+// Primary Color:
+
+// Color: Deep Sapphire Blue
+// Hex Code: #001F3F
+// Accent Color:
+
+// Color: Gold
+// Hex Code: #FFD700
+// Heading Color:
+
+// Color: Ivory or Light Gray
+// Hex Code: #F8F8F8 or #EDEDED
+// Body Text Color:
+
+// Color: Light Gray
+// Hex Code: #CCCCCC
+// Paragraph Hue:
+
+// Color: Royal Purple
+// Hex Code: #4B0082
